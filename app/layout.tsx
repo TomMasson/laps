@@ -1,25 +1,28 @@
-import { Protest_Guerrilla, Roboto_Condensed } from "next/font/google";
+import type { Metadata } from "next";
+import { Manrope } from "next/font/google";
 
-const fontTitle = Protest_Guerrilla({
-	weight: "400",
+const fontTitle = Manrope({
+	weight: "700",
 	subsets: ["latin"],
 	variable: "--fontTitle",
-	display: "swap",
 });
 
-const fontText = Roboto_Condensed({
+const fontText = Manrope({
 	weight: "400",
 	subsets: ["latin"],
 	variable: "--fontText",
-	display: "swap",
 });
 
-export const metadata = {
-	title: "Biblio-Tech",
-	description: "Une bibliothèque enligne, pour consulter nos livres",
+export const metadata: Metadata = {
+	title: "LAPS",
+	description: "Découvre LAPS",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
 	return (
 		<html lang="en">
 			<body className={`${fontTitle.variable} ${fontText.variable}`}>
