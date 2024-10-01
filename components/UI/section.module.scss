@@ -1,0 +1,25 @@
+@import "@/design/variables.scss";
+@import "@/design/theme.scss";
+
+.block {
+	height: 20px;
+	width: 100px;
+
+	&.primary {
+		background-color: $primary;
+	}
+
+	&.secondary {
+		background-color: $secondary;
+	}
+}
+
+.titre {
+	@include titleStyle;
+	text-align: left;
+}
+
+.description {
+	@include textStyle;
+	text-align: left;
+}

@@ -1,0 +1,13 @@
+@import "@/design/variables.scss";
+
+@mixin textStyle {
+	font-family: Manrope;
+	font-size: 25px;
+	font-weight: 400;
+}
+
+@mixin titleStyle {
+	font-family: Manrope;
+	font-size: 44px;
+	font-weight: 700;
+}
