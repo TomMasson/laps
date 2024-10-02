@@ -1,12 +1,15 @@
 .background {
-	background-color: black;
-	color: white;
-	width: 100vw;
-	height: 180vh;
-	clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
-	z-index: -5;
+	filter: drop-shadow(0px 10px 6px #00000040);
 
-	.centered {
-		transform: translateY(30vh);
+	.clipPath {
+		background-color: black;
+		color: white;
+		width: 100vw;
+		height: 180vh;
+		clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+
+		.centered {
+			transform: translateY(30vh);
+		}
 	}
 }
