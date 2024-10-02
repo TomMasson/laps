@@ -4,12 +4,11 @@ import Image from "next/image";
 
 interface ICarteMembre {
 	membre: membre;
-	index: number;
 }
 
-const CarteMembre = ({ membre, index }: ICarteMembre) => {
+const CarteMembre = ({ membre }: ICarteMembre) => {
 	return (
-		<div className={styles.container} key={index}>
+		<div className={styles.container}>
 			<Image
 				src={`/images/membres/${membre.img ?? "default.png"}`}
 				width={176}

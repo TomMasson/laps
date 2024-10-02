@@ -1,9 +1,7 @@
-@import "@/design/variables.scss";
 @import "@/design/theme.scss";
 
-.section {
-	max-width: 80vw;
-	margin: 150px auto auto auto;
+.container {
+	padding-top: 150px;
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
@@ -11,7 +9,7 @@
 	.block {
 		height: 27px;
 		width: 164px;
-		margin-bottom: 150px;
+		margin-bottom: 110px;
 
 		&.primary {
 			background-color: $primary;
@@ -27,7 +25,7 @@
 		text-align: left;
 	}
 
-	.description {
+	.sousTitre {
 		@include textStyle;
 		text-align: left;
 	}

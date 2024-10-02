@@ -1,0 +1,12 @@
+.background {
+	background-color: black;
+	color: white;
+	width: 100vw;
+	height: 180vh;
+	clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+	z-index: -5;
+
+	.centered {
+		transform: translateY(30vh);
+	}
+}
