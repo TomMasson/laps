@@ -1,31 +1,31 @@
+import HomePicture from "../sections/home-picture";
+import ListeMembres from "../sections/membres/liste-membre";
 import Section from "../UI/section";
 
 const HomePage = () => {
 	return (
 		<>
-			<div>Homepicture</div>
+			<HomePicture />
 			<Section
-				color={"primary"}
+				color={"secondary"}
 				titre="Notre histoire"
 				description="On vient de la street et vous allez bientôt le savoir"
 			>
-				histoire
+				<ListeMembres />
 			</Section>
 			<div>Galerie</div>
 			<Section
-				color={"secondary"}
+				color={"primary"}
 				titre="Nous écouter"
 				description="Notre univers, nos créations"
 			>
 				morceaux
 			</Section>
 			<Section
-				color={"primary"}
+				color={"secondary"}
 				titre="Articles de presse"
 				description="Vous pouvez nous retrouver ici, et là"
-			>
-				articles
-			</Section>
+			/>
 			<div>Footer</div>
 		</>
 	);

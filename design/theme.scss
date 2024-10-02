@@ -5,6 +5,11 @@
 	font-size: 25px;
 }
 
+@mixin smTitleStyle {
+	font-family: $fontTitle;
+	font-size: 25px;
+}
+
 @mixin titleStyle {
 	font-family: $fontTitle;
 	font-size: 44px;

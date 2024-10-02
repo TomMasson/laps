@@ -1,0 +1,19 @@
+@import "@/design/theme.scss";
+
+.container {
+	width: 176px;
+	text-align: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+
+	.nom {
+		@include smTitleStyle;
+	}
+
+	.desc {
+		@include textStyle;
+	}
+}
