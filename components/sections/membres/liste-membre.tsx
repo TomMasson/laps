@@ -2,7 +2,7 @@ import CarteMembre from "./carte-membres";
 import styles from "./liste-membre.module.scss";
 import membres, { membre } from "@/backend/membres";
 
-const ListeMembres = () => {
+export default function ListeMembres() {
 	return (
 		<div className={styles.container}>
 			{membres.map((membre: membre, index: number) => (
@@ -10,6 +10,4 @@ const ListeMembres = () => {
 			))}
 		</div>
 	);
-};
-
-export default ListeMembres;
+}

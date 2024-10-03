@@ -1,14 +1,19 @@
 import Header from "./section-header";
 import styles from "./section.module.scss";
 
-export interface ISection {
+export interface SectionType {
 	titre: string;
 	description: string;
 	children?: JSX.Element | string;
 	color?: string;
 }
 
-const Section = ({ children, titre, description, color }: ISection) => {
+export default function Section({
+	children,
+	titre,
+	description,
+	color,
+}: SectionType) {
 	return (
 		<>
 			<div className={styles.section}>
@@ -21,6 +26,4 @@ const Section = ({ children, titre, description, color }: ISection) => {
 			</div>
 		</>
 	);
-};
-
-export default Section;
+}

@@ -2,11 +2,11 @@ import { membre } from "@/backend/membres";
 import styles from "./carte-membres.module.scss";
 import Image from "next/image";
 
-interface ICarteMembre {
+interface CarteMembre {
 	membre: membre;
 }
 
-const CarteMembre = ({ membre }: ICarteMembre) => {
+export default function CarteMembre({ membre }: CarteMembre) {
 	return (
 		<div className={styles.container}>
 			<Image
@@ -19,6 +19,4 @@ const CarteMembre = ({ membre }: ICarteMembre) => {
 			<div className={styles.desc}>{membre.desc}</div>
 		</div>
 	);
-};
-
-export default CarteMembre;
+}

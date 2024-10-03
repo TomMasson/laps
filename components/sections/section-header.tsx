@@ -1,12 +1,16 @@
 import styles from "./section-header.module.scss";
 
-interface ISectionHeader {
+interface SectionHeader {
 	titre: string;
 	sousTitre: string;
 	color?: string;
 }
 
-const SectionHeader = ({ titre, sousTitre, color }: ISectionHeader) => {
+export default function SectionHeader({
+	titre,
+	sousTitre,
+	color,
+}: SectionHeader) {
 	return (
 		<div className={styles.container}>
 			{color && (
@@ -16,6 +20,4 @@ const SectionHeader = ({ titre, sousTitre, color }: ISectionHeader) => {
 			<div className={styles.sousTitre}>{sousTitre}</div>
 		</div>
 	);
-};
-
-export default SectionHeader;
+}

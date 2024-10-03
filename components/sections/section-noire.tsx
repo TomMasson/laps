@@ -1,7 +1,11 @@
-import Section, { ISection } from "./section";
+import Section, { SectionType } from "./section";
 import styles from "./section-noire.module.scss";
 
-const BlackSection = ({ children, titre, description }: ISection) => {
+export default function BlackSection({
+	children,
+	titre,
+	description,
+}: SectionType) {
 	return (
 		<div className={styles.background}>
 			<div className={styles.clipPath}>
@@ -13,6 +17,4 @@ const BlackSection = ({ children, titre, description }: ISection) => {
 			</div>
 		</div>
 	);
-};
-
-export default BlackSection;
+}

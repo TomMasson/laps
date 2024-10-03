@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./home-picture.module.scss";
 
-const HomePicture = () => {
+export default function HomePicture() {
 	return (
 		<div className={styles.container}>
 			<Image
@@ -13,6 +13,4 @@ const HomePicture = () => {
 			/>
 		</div>
 	);
-};
-
-export default HomePicture;
+}

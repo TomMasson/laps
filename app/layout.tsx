@@ -1,4 +1,4 @@
-import "@/design/globals.scss";
+import "@/styles/globals.scss";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
@@ -16,16 +16,17 @@ const fontText = Manrope({
 
 export const metadata: Metadata = {
 	title: "LAPS",
-	description: "Découvre LAPS",
+	description:
+		"Découvrez LAPS, le crew de rap lyonnais qui fait vibrer la scène musicale. Plongez dans notre univers artistique, écoutez nos dernières créations, et suivez nos actualités. LAPS, c'est l'énergie du rap, l'authenticité de Lyon. Rejoignez-nous et partagez notre passion pour la musique !",
 };
 
-export default function RootLayout({
-	children,
-}: Readonly<{
+export type IRootLayout = {
 	children: React.ReactNode;
-}>) {
+};
+
+export default function RootLayout({ children }: IRootLayout) {
 	return (
-		<html lang="en">
+		<html lang="fr">
 			<body className={`${fontTitle.variable} ${fontText.variable}`}>
 				{children}
 			</body>

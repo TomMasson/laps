@@ -4,7 +4,7 @@ import BlackSection from "../sections/section-noire";
 import ListeMembres from "../sections/membres/liste-membre";
 import Galerie from "../sections/galerie/galerie";
 
-const HomePage = () => {
+export default function HomePage() {
 	return (
 		<>
 			<HomePicture />
@@ -36,6 +36,4 @@ const HomePage = () => {
 			<div>Footer</div>
 		</>
 	);
-};
-
-export default HomePage;
+}
