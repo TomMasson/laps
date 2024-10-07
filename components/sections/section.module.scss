@@ -1,6 +1,9 @@
-@import "@/styles/theme.scss";
+@import "@/styles/variables.scss";
 
 .section {
-	max-width: 80vw;
 	margin: auto;
+
+	&.maxWidth {
+		max-width: $globalWidth;
+	}
 }
