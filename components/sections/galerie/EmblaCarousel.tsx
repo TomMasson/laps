@@ -4,7 +4,6 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import styles from "./EmblaCarousel.module.scss";
-import "./todo/embla.css";
 
 type PropType = {
 	slides: number[];
