@@ -14,7 +14,7 @@ export default function Section({
 	titre,
 	description,
 	color,
-	margins,
+	margins = true,
 }: SectionType) {
 	return (
 		<>
