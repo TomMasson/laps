@@ -10,11 +10,7 @@ export default function BlackSection({
 		<div className={styles.background}>
 			<div className={styles.clipPath}>
 				<div className={styles.centered}>
-					<Section
-						titre={titre}
-						description={description}
-						margins={false}
-					>
+					<Section titre={titre} description={description}>
 						{children}
 					</Section>
 				</div>

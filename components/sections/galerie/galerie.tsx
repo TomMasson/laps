@@ -1,10 +1,5 @@
-import EmblaCarousel from "./EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
-
-const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import styles from "./galerie.module.scss";
 
 export default function Galerie() {
-	return <EmblaCarousel slides={SLIDES} options={OPTIONS} />;
+	return <div className={styles.background}></div>;
 }

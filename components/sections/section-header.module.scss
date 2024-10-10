@@ -6,11 +6,6 @@
 	flex-direction: column;
 	gap: 1.5rem;
 
-	&.addMargin {
-		max-width: $globalWidth;
-		margin: auto;
-	}
-
 	.block {
 		height: 27px;
 		width: 164px;

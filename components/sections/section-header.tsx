@@ -4,21 +4,15 @@ interface SectionHeader {
 	titre: string;
 	sousTitre: string;
 	color?: string;
-	addMargin?: boolean;
 }
 
 export default function SectionHeader({
 	titre,
 	sousTitre,
 	color,
-	addMargin,
 }: SectionHeader) {
 	return (
-		<div
-			className={`${styles.container} ${
-				addMargin ? styles.addMargin : ""
-			}`}
-		>
+		<div className={styles.container}>
 			{color && (
 				<div className={`${styles.block} ${styles[`${color}`]}`}></div>
 			)}

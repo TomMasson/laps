@@ -1,9 +1,8 @@
 import HomePicture from "../sections/accueil/home-picture";
-import Section from "../sections/layout/section";
-import BlackSection from "../sections/layout/section-noire";
+import Section from "../sections/section";
+import BlackSection from "../sections/section-noire";
 import ListeMembres from "../sections/membres/liste-membre";
 import Galerie from "../sections/galerie/galerie";
-import Footer from "../sections/layout/footer";
 
 export default function HomePage() {
 	return (
@@ -26,13 +25,15 @@ export default function HomePage() {
 				color="primary"
 				titre="Nous écouter"
 				description="Notre univers, nos créations"
-			></Section>
+			>
+				morceaux
+			</Section>
 			<Section
 				color="secondary"
 				titre="Articles de presse"
 				description="Vous pouvez nous retrouver ici, et là"
 			/>
-			<Footer />
+			<div>Footer</div>
 		</>
 	);
 }
