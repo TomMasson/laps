@@ -4,8 +4,6 @@ import BlackSection from "../sections/layout/section-noire";
 import ListeMembres from "../sections/membres/liste-membre";
 import Galerie from "../sections/galerie/galerie";
 import Footer from "../sections/layout/footer";
-import Articles from "../sections/articles/article-list";
-import Morceaux from "../sections/morceaux/morceaux-list";
 
 export default function HomePage() {
 	return (
@@ -29,14 +27,14 @@ export default function HomePage() {
 				titre="Nous écouter"
 				description="Notre univers, nos créations"
 			>
-				<Morceaux />
+				Morceaux
 			</Section>
 			<Section
 				color="secondary"
 				titre="Articles de presse"
 				description="Vous pouvez nous retrouver ici, et là"
 			>
-				<Articles />
+				Articles
 			</Section>
 			<Footer />
 		</>
