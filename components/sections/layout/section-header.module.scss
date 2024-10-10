@@ -1,0 +1,37 @@
+@import "@/styles/theme.scss";
+
+.container {
+	padding-top: 150px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+
+	&.addMargin {
+		max-width: $globalWidth;
+		margin: auto;
+	}
+
+	.block {
+		height: 27px;
+		width: 164px;
+		margin-bottom: 110px;
+
+		&.primary {
+			background-color: $primary;
+		}
+
+		&.secondary {
+			background-color: $secondary;
+		}
+	}
+
+	.titre {
+		@include titleStyle;
+		text-align: left;
+	}
+
+	.sousTitre {
+		@include textStyle;
+		text-align: left;
+	}
+}

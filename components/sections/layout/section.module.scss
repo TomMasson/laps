@@ -1,0 +1,9 @@
+@import "@/styles/variables.scss";
+
+.section {
+	margin: auto;
+
+	&.maxWidth {
+		max-width: $globalWidth;
+	}
+}
