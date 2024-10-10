@@ -2,6 +2,12 @@ import "@/styles/globals.scss";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
+const fontFooter = Manrope({
+	weight: "800",
+	subsets: ["latin"],
+	variable: "--fontFooter",
+});
+
 const fontTitle = Manrope({
 	weight: "700",
 	subsets: ["latin"],
@@ -27,7 +33,9 @@ export type IRootLayout = {
 export default function RootLayout({ children }: IRootLayout) {
 	return (
 		<html lang="fr">
-			<body className={`${fontTitle.variable} ${fontText.variable}`}>
+			<body
+				className={`${fontFooter.variable} ${fontTitle.variable} ${fontText.variable}`}
+			>
 				{children}
 			</body>
 		</html>

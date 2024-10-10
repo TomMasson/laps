@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "embla-carousel-react": "^8.3.0",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
+    "react-social-icons": "^6.18.0",
     "sass": "^1.79.4"
   },
   "devDependencies": {

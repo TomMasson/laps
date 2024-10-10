@@ -6,6 +6,7 @@ export interface SectionType {
 	description: string;
 	children?: JSX.Element | string;
 	color?: string;
+	margins?: boolean;
 }
 
 export default function Section({
@@ -13,14 +14,20 @@ export default function Section({
 	titre,
 	description,
 	color,
+	margins = true,
 }: SectionType) {
 	return (
 		<>
-			<div className={styles.section}>
+			<div
+				className={`${styles.section} ${
+					margins ? styles.maxWidth : ""
+				}`}
+			>
 				<Header
 					titre={titre}
 					sousTitre={description}
 					color={color ?? undefined}
+					addMargin={margins ? false : true}
 				/>
 				{children}
 			</div>
