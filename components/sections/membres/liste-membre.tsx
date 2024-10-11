@@ -1,6 +1,6 @@
 import CarteMembre from "./carte-membres";
 import styles from "./liste-membre.module.scss";
-import membres, { membre } from "@/backend/membres";
+import { membres, membre } from "@/backend/membres";
 
 export default function ListeMembres() {
 	return (

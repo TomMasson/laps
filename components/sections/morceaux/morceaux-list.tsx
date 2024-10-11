@@ -1,57 +1,36 @@
 "use client";
 
-import WavesurferPlayer from "@wavesurfer/react";
 import { useState } from "react";
-import { FaPlayCircle } from "react-icons/fa";
-import { FaPauseCircle } from "react-icons/fa";
-import Image from "next/image";
+import { morceaux } from "@/backend/morceaux";
+import Morceau from "./morceau-item";
 import styles from "./morceaux-list.module.scss";
+import WaveSurfer from "wavesurfer.js";
 
-const Morceaux = () => {
-	const [wavesurfer, setWavesurfer] = useState(null);
-	const [isPlaying, setIsPlaying] = useState(false);
+export default function Morceaux() {
+	const [songs, setSongs] = useState<WaveSurfer[]>([]);
 
-	const onReady = (ws: any) => {
-		setWavesurfer(ws);
-		setIsPlaying(false);
-	};
-
-	const onPlayPause = () => {
-		wavesurfer && wavesurfer.playPause();
+	const togglePlayPause = (songId: number) => {
+		songs.map((song, index) => {
+			if (index === songId) {
+				song.playPause();
+			} else {
+				song.pause();
+			}
+		});
 	};
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.control}>
-				<Image
-					className={styles.image}
-					src={"/tracks/default.png"}
-					fill
-					alt="Photo d'un morceau par défaut"
-				/>
-				<div className={styles.playBtn} onClick={onPlayPause}>
-					{isPlaying ? <FaPauseCircle /> : <FaPlayCircle />}
-				</div>
-			</div>
-			<div className={styles.sound}>
-				<div className={styles.titre}>TITRE MORCEAU</div>
-				<div className={styles.player}>
-					<WavesurferPlayer
-						height={100}
-						waveColor="violet"
-						url="/tracks/TOM ST ROMAN Mix.mp3"
-						barWidth={5}
-						barRadius={30}
-						barGap={3}
-						normalize={true}
-						onReady={onReady}
-						onPlay={() => setIsPlaying(true)}
-						onPause={() => setIsPlaying(false)}
+			{morceaux &&
+				morceaux.map((morceau, index) => (
+					<Morceau
+						key={index}
+						song={morceau}
+						songs={songs}
+						setSongs={setSongs}
+						onPlayPause={togglePlayPause}
 					/>
-				</div>
-			</div>
+				))}
 		</div>
 	);
-};
-
-export default Morceaux;
+}

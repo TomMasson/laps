@@ -4,7 +4,7 @@ export type membre = {
 	img?: string;
 };
 
-const membres: membre[] = [
+export const membres: membre[] = [
 	{
 		nom: "Arsen",
 		desc: "Chanteur & lover aguerri",
@@ -30,5 +30,3 @@ const membres: membre[] = [
 		desc: "Il aime défier le soleil, c'est le Yang",
 	},
 ];
-
-export default membres;
