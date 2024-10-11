@@ -1,4 +1,5 @@
-@import "@/styles/theme.scss";
+@use "@/styles/variables.scss" as *;
+@use "@/styles/theme.scss" as theme;
 
 .background {
 	background-color: black;
@@ -32,14 +33,14 @@
 			}
 
 			.contact {
-				@include textStyle;
+				@include theme.textStyle;
 				display: flex;
 				flex-direction: inherit;
 				gap: 1rem;
 				padding: 40px 0;
 
 				.title {
-					@include smTitleStyle;
+					@include theme.smTitleStyle;
 				}
 				p {
 					margin: 0;
@@ -52,7 +53,7 @@
 				gap: 1rem;
 
 				.titleLinks {
-					@include smTitleStyle;
+					@include theme.smTitleStyle;
 				}
 
 				.logos {
@@ -64,7 +65,7 @@
 
 		.botLine {
 			text-align: center;
-			@include textStyle;
+			@include theme.textStyle;
 			padding: 75px;
 		}
 	}

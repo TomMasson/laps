@@ -9,7 +9,7 @@ import styles from "./morceau-item.module.scss";
 import { useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 
-type MorceauCard = {
+type MorceauCardProps = {
 	song: morceau;
 	songs: object[];
 	setSongs: any;
@@ -21,7 +21,7 @@ export default function Morceau({
 	songs,
 	setSongs,
 	onPlayPause,
-}: MorceauCard) {
+}: MorceauCardProps) {
 	const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
 	const onReady = (ws: WaveSurfer) => {
