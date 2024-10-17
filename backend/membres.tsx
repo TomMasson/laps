@@ -2,10 +2,10 @@ export type membre = {
 	nom: string;
 	desc: string;
 	img?: string;
-	spotify?: infosSpotifyArtiste;
+	spotify?: InfosSpotifyArtiste;
 };
 
-export type infosSpotifyArtiste = {
+export type InfosSpotifyArtiste = {
 	nom: string;
 	url: string;
 };
@@ -57,7 +57,7 @@ export const membres: membre[] = [
 	},
 ];
 
-export const spotifyLAPS: infosSpotifyArtiste = {
+export const spotifyLAPS: InfosSpotifyArtiste = {
 	nom: "LAPS",
 	url: "https://open.spotify.com/intl-fr/artist/1YpXP9PpvhB9XyZLg8nznb?si=qRCu6s7xRnOvB_3rYG1T8A",
 };

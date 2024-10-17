@@ -7,9 +7,13 @@ type LogoProps = {
 
 export default function Logo({ size, isBlack }: LogoProps) {
 	const src = `/images/logo${isBlack ? "_noir" : ""}.png`;
-	return size ? (
-		<Image src={src} height={size} width={size} alt="Logo LAPS" />
-	) : (
-		<Image src={src} fill alt="Logo LAPS" />
+	return (
+		<Image
+			src={src}
+			height={size || undefined}
+			width={size || undefined}
+			fill={!size || undefined}
+			alt="Logo LAPS"
+		/>
 	);
 }

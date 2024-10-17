@@ -1,4 +1,4 @@
-import CarteMembre, { align } from "./carte-membres";
+import CarteMembre, { AlignementType } from "./carte-membres";
 import styles from "./liste-membre.module.scss";
 import { membres, membre } from "@/backend/membres";
 
@@ -9,7 +9,11 @@ export default function ListeMembres() {
 				<CarteMembre
 					membre={membre}
 					key={index}
-					alignContent={index % 2 === 0 ? align.left : align.right}
+					alignContent={
+						index % 2 === 0
+							? AlignementType.left
+							: AlignementType.right
+					}
 				/>
 			))}
 		</div>
