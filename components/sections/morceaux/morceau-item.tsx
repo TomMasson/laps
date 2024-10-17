@@ -56,7 +56,7 @@ export default function Morceau({
 						barWidth={5}
 						barRadius={30}
 						barGap={3}
-						normalize={true}
+						normalize
 						onReady={onReady}
 						onPlay={() => setIsPlaying(true)}
 						onPause={() => setIsPlaying(false)}

@@ -2,10 +2,10 @@ export type membre = {
 	nom: string;
 	desc: string;
 	img?: string;
-	spotify?: infosSpotifyArtiste;
+	spotify?: InfosSpotifyArtiste;
 };
 
-export type infosSpotifyArtiste = {
+export type InfosSpotifyArtiste = {
 	nom: string;
 	url: string;
 };

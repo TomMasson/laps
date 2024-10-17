@@ -14,7 +14,7 @@ export default function BlackSection({
 						titre={titre}
 						description={description}
 						margins={false}
-						isBlack={true}
+						isBlack
 					>
 						{children}
 					</Section>

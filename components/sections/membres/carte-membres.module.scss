@@ -8,7 +8,7 @@
 	gap: 10px;
 
 	&.right {
-		justify-content: flex-end;
+		flex-direction: row-reverse;
 
 		.infos {
 			align-items: flex-end;

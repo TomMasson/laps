@@ -2,10 +2,10 @@ import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import styles from "./spotify-button.module.scss";
-import { infosSpotifyArtiste } from "@/backend/membres";
+import { InfosSpotifyArtiste } from "@/backend/membres";
 
 export type SpotifyLinkButton = {
-	infos: infosSpotifyArtiste;
+	infos: InfosSpotifyArtiste;
 };
 
 export default function SpotifyButton({ infos }: SpotifyLinkButton) {
