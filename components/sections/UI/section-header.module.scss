@@ -1,0 +1,59 @@
+@use "@/styles/theme.scss" as *;
+@use "@/styles/variables.scss" as vars;
+
+.container {
+	padding-top: 75px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+
+	&.addMargin {
+		max-width: vars.$globalWidth;
+		margin: auto;
+	}
+
+	.blocks {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&.noBlock {
+			justify-content: flex-end;
+		}
+
+		.block {
+			height: 27px;
+			width: 164px;
+			left: 0;
+
+			&.primary {
+				background-color: vars.$primary;
+			}
+
+			&.secondary {
+				background-color: vars.$secondary;
+			}
+		}
+
+		.logo {
+			height: 164px;
+			width: 164px;
+			position: relative;
+		}
+	}
+
+	.titres {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		.titre {
+			@include titleStyle;
+			text-align: left;
+		}
+
+		.sousTitre {
+			@include textStyle;
+			text-align: left;
+		}
+	}
+}

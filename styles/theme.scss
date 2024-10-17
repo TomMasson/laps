@@ -1,16 +1,16 @@
-@use "@/styles/variables.scss" as *;
+@use "@/styles/variables.scss" as vars;
 
 @mixin textStyle {
-	font-family: $fontText;
+	font-family: vars.$fontText;
 	font-size: 25px;
 }
 
 @mixin smTitleStyle {
-	font-family: $fontTitle;
+	font-family: vars.$fontTitle;
 	font-size: 25px;
 }
 
 @mixin titleStyle {
-	font-family: $fontTitle;
+	font-family: vars.$fontTitle;
 	font-size: 44px;
 }

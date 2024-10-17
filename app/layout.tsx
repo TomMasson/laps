@@ -1,6 +1,12 @@
 import "@/styles/globals.scss";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
+
+const spotifyFont = localFont({
+	src: "./fonts/GothamBold.ttf",
+	variable: "--spotifyFont",
+});
 
 const fontFooter = Manrope({
 	weight: "800",
@@ -34,7 +40,7 @@ export default function RootLayout({ children }: IRootLayout) {
 	return (
 		<html lang="fr">
 			<body
-				className={`${fontFooter.variable} ${fontTitle.variable} ${fontText.variable}`}
+				className={`${fontFooter.variable} ${fontTitle.variable} ${fontText.variable} ${spotifyFont.className}`}
 			>
 				{children}
 			</body>

@@ -5,6 +5,8 @@ import { morceaux } from "@/backend/morceaux";
 import Morceau from "./morceau-item";
 import styles from "./morceaux-list.module.scss";
 import WaveSurfer from "wavesurfer.js";
+import SpotifyButton from "../UI/spotify-button";
+import { spotifyLAPS } from "@/backend/membres";
 
 export default function Morceaux() {
 	const [songs, setSongs] = useState<WaveSurfer[]>([]);
@@ -31,6 +33,10 @@ export default function Morceaux() {
 						onPlayPause={togglePlayPause}
 					/>
 				))}
+
+			<div className={styles.btnContainer}>
+				<SpotifyButton infos={spotifyLAPS} />
+			</div>
 		</div>
 	);
 }

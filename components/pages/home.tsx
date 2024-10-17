@@ -1,9 +1,9 @@
 import HomePicture from "../sections/accueil/home-picture";
-import Section from "../sections/layout/section";
-import BlackSection from "../sections/layout/section-noire";
+import Section from "../sections/UI/section";
+import BlackSection from "../sections/UI/section-noire";
 import ListeMembres from "../sections/membres/liste-membre";
 import Galerie from "../sections/galerie/galerie";
-import Footer from "../sections/layout/footer";
+import Footer from "../sections/UI/footer";
 import Articles from "../sections/articles/article-list";
 import Morceaux from "../sections/morceaux/morceaux-list";
 
