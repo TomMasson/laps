@@ -1,0 +1,94 @@
+@use "@/styles/theme.scss" as *;
+@use "@/styles/variables.scss" as vars;
+
+.background {
+	background-color: black;
+	clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+	padding-top: 160px;
+
+	.container {
+		color: white;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		max-width: vars.$globalWidth;
+		margin: auto;
+
+		.footerContent {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			.blockLaps {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin-top: 1px;
+
+				.logo {
+					padding-top: 7px;
+				}
+				.laps {
+					background: -webkit-linear-gradient(
+						#a42fbc 10.79%,
+						#23b9d1 85.45%
+					);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+
+					font-family: vars.$fontFooter;
+					font-size: 100px;
+				}
+			}
+
+			.contact {
+				@include textStyle;
+				display: flex;
+				flex-direction: inherit;
+				gap: 1rem;
+				padding: 40px 0;
+
+				p {
+					margin: 0;
+				}
+
+				.title {
+					@include smTitleStyle;
+				}
+
+				.link {
+					a {
+						color: white;
+						text-decoration: none;
+
+						&:hover {
+							color: vars.$primary;
+						}
+					}
+				}
+			}
+
+			.reseaux {
+				display: flex;
+				flex-direction: inherit;
+				gap: 1rem;
+
+				.titleLinks {
+					@include smTitleStyle;
+				}
+
+				.logos {
+					display: flex;
+					gap: 1rem;
+				}
+			}
+		}
+
+		.botLine {
+			margin: 75px;
+			text-align: center;
+			@include textStyle;
+		}
+	}
+}

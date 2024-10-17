@@ -7,6 +7,7 @@ export interface SectionType {
 	children?: JSX.Element | string;
 	color?: string;
 	margins?: boolean;
+	isBlack?: boolean;
 }
 
 export default function Section({
@@ -15,6 +16,7 @@ export default function Section({
 	description,
 	color,
 	margins = true,
+	isBlack = false,
 }: SectionType) {
 	return (
 		<>
@@ -28,6 +30,7 @@ export default function Section({
 					sousTitre={description}
 					color={color ?? undefined}
 					addMargin={margins ? false : true}
+					isBlack={isBlack}
 				/>
 				{children}
 			</div>
