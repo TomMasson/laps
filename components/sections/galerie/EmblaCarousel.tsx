@@ -4,6 +4,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import styles from "./EmblaCarousel.module.scss";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 type PropType = {
 	slides: number[];
@@ -11,7 +12,9 @@ type PropType = {
 };
 
 export default function EmblaCarousel({ slides, options }: PropType) {
-	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+		WheelGesturesPlugin(),
+	]);
 
 	return (
 		<section className={styles.embla}>
@@ -21,7 +24,8 @@ export default function EmblaCarousel({ slides, options }: PropType) {
 						<div className={styles.emblaSlide} key={index}>
 							<div className={styles.emblaSlideContent}>
 								<Image
-									src={"/images/carousel.jpeg"}
+									className={styles.image}
+									src={`/images/carousel/${index}.jpg`}
 									alt="Image de carousel"
 									fill
 								/>

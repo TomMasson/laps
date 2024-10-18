@@ -29,16 +29,7 @@
 					padding-top: 7px;
 				}
 				.laps {
-					background: -webkit-linear-gradient(
-						#a42fbc 10.79%,
-						#23b9d1 85.45%
-					);
-					background-clip: text;
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-
-					font-family: vars.$fontFooter;
-					font-size: 100px;
+					@include gradientLAPS;
 				}
 			}
 
