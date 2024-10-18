@@ -20,6 +20,7 @@ export default function CarteMembre({ membre, alignContent }: CarteMembre) {
 				src={`/images/membres/${membre.img ?? "default.png"}`}
 				width={176}
 				height={178}
+				className={styles.photo}
 				alt={`Photo de profil de ${membre.nom}`}
 			/>
 			<div className={styles.infos}>

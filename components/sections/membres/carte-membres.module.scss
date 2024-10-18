@@ -5,7 +5,12 @@
 	position: relative;
 	display: flex;
 	justify-content: flex-start;
-	gap: 10px;
+	gap: 30px;
+
+	.photo {
+		object-fit: cover;
+		border-radius: 10%;
+	}
 
 	&.right {
 		flex-direction: row-reverse;
@@ -16,7 +21,6 @@
 	}
 
 	.infos {
-		padding-left: 10px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -30,5 +34,6 @@
 
 	.desc {
 		@include textStyle;
+		padding-bottom: 5px;
 	}
 }

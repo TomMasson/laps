@@ -31,13 +31,6 @@ export default function HomePage() {
 			>
 				<Morceaux />
 			</Section>
-			<Section
-				color="secondary"
-				titre="Articles de presse"
-				description="Vous pouvez nous retrouver ici, et là"
-			>
-				<Articles />
-			</Section>
 			<Footer />
 		</>
 	);
