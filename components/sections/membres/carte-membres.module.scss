@@ -36,4 +36,9 @@
 		@include textStyle;
 		padding-bottom: 5px;
 	}
+
+	.musicLinks {
+		display: flex;
+		gap: 10px;
+	}
 }

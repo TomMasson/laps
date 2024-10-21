@@ -1,7 +1,8 @@
-import { membre } from "@/backend/membres";
-import styles from "./carte-membres.module.scss";
+import { membre, MusicLink } from "@/backend/membres";
 import Image from "next/image";
-import SpotifyButton from "../UI/spotify-button";
+import { SocialIcon } from "react-social-icons";
+import MusicIcon from "../UI/music/music-icon";
+import styles from "./carte-membres.module.scss";
 
 export enum AlignementType {
 	left = "left",
@@ -26,7 +27,49 @@ export default function CarteMembre({ membre, alignContent }: CarteMembre) {
 			<div className={styles.infos}>
 				<div className={styles.nom}>{membre.nom}</div>
 				<div className={styles.desc}>{membre.desc}</div>
-				{membre.spotify && <SpotifyButton infos={membre.spotify} />}
+				{membre.urls && (
+					<div className={styles.musicLinks}>
+						{membre.urls.map((link: MusicLink, i) => {
+							switch (link.platform) {
+								case "deezer":
+									return (
+										<MusicIcon
+											key={i}
+											url={link.url}
+											type="Deezer"
+											img="deezer-icon.png"
+										/>
+									);
+								case "ytmusic":
+									return (
+										<MusicIcon
+											key={i}
+											url={link.url}
+											type="Youtube Music"
+											img="yt-music-icon.svg"
+										/>
+									);
+								case "itunes":
+									return (
+										<SocialIcon
+											key={i}
+											url={link.url}
+											network={link.platform}
+											bgColor={"#FA233B"}
+										/>
+									);
+								default:
+									return (
+										<SocialIcon
+											key={i}
+											url={link.url}
+											network={link.platform}
+										/>
+									);
+							}
+						})}
+					</div>
+				)}
 			</div>
 		</div>
 	);

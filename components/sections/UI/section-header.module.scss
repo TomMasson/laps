@@ -27,11 +27,11 @@
 			left: 0;
 
 			&.primary {
-				background-color: vars.$primary;
+				background-color: vars.$primarySobre;
 			}
 
 			&.secondary {
-				background-color: vars.$secondary;
+				background-color: vars.$secondarySobre;
 			}
 		}
 
@@ -39,6 +39,10 @@
 			height: 100px;
 			width: 100px;
 			position: relative;
+
+			&.isBlack {
+				transform: translateY(124px);
+			}
 		}
 	}
 

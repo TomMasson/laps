@@ -51,7 +51,8 @@ export default function Morceau({
 				<div className={styles.player}>
 					<WavesurferPlayer
 						height={100}
-						waveColor="violet"
+						waveColor="gray"
+						progressColor="violet"
 						url={song.url}
 						barWidth={5}
 						barRadius={30}
