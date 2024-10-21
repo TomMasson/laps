@@ -29,7 +29,11 @@ export default function SectionHeader({
 						className={`${styles.block} ${styles[`${color}`]}`}
 					></div>
 				)}
-				<div className={styles.logo}>
+				<div
+					className={`${styles.logo} ${
+						isBlack ? styles.isBlack : ""
+					}`}
+				>
 					<Logo isBlack={!isBlack} />
 				</div>
 			</div>
