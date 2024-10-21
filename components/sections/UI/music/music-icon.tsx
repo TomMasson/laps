@@ -4,17 +4,21 @@ import styles from "./music-icon.module.scss";
 
 export type MusicIconProps = {
 	url: string;
-	type: string;
-	img: string;
+	type: "deezer" | "ytmusic";
 };
 
-export default function MusicIcon({ url, type, img }: MusicIconProps) {
+const IconUrls: Record<MusicIconProps["type"], string> = {
+	ytmusic: "yt-music-icon.svg",
+	deezer: "deezer-icon.png",
+};
+
+export default function MusicIcon({ url, type }: MusicIconProps) {
 	return (
 		<div className={styles.circleIcon}>
 			<Link href={url}>
 				<Image
 					fill
-					src={`/images/musique/${img}`}
+					src={`/images/musique/${IconUrls[type]}`}
 					alt={`Logo ${type}`}
 				/>
 			</Link>

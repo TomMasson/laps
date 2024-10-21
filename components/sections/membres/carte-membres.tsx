@@ -36,8 +36,7 @@ export default function CarteMembre({ membre, alignContent }: CarteMembre) {
 										<MusicIcon
 											key={i}
 											url={link.url}
-											type="Deezer"
-											img="deezer-icon.png"
+											type="deezer"
 										/>
 									);
 								case "ytmusic":
@@ -45,8 +44,7 @@ export default function CarteMembre({ membre, alignContent }: CarteMembre) {
 										<MusicIcon
 											key={i}
 											url={link.url}
-											type="Youtube Music"
-											img="yt-music-icon.svg"
+											type="ytmusic"
 										/>
 									);
 								case "itunes":
