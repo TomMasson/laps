@@ -1,4 +1,5 @@
 @use "@/styles/theme.scss" as *;
+@use "@/styles/breakpoints.scss" as bp;
 
 .container {
 	display: flex;
@@ -43,6 +44,29 @@
 		}
 		.player {
 			width: 100%;
+		}
+	}
+}
+
+@include bp.respond-to(tablet) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		.control {
+			width: 175px;
+			height: 175px;
+		}
+
+		.sound {
+			.titre {
+				font-size: 16px;
+			}
+
+			.player {
+				display: none;
+			}
 		}
 	}
 }

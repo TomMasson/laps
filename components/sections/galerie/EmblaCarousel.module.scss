@@ -1,9 +1,11 @@
+@use "@/styles/breakpoints.scss" as bp;
+
 .embla {
-	width: 100vw;
-	margin: 20vh auto;
 	--slide-height: 520px;
 	--slide-spacing: 4rem;
 	--slide-size: 33%;
+	width: 100vw;
+	margin: 20vh auto;
 	overflow-x: scroll;
 }
 .emblaViewport {
@@ -32,5 +34,13 @@
 
 	.image {
 		object-fit: cover;
+	}
+}
+
+@include bp.respond-to(tablet) {
+	.embla {
+		--slide-height: 45vh;
+		--slide-size: 70%;
+		margin: 100px auto;
 	}
 }

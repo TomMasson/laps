@@ -1,5 +1,6 @@
 @use "@/styles/theme.scss" as *;
 @use "@/styles/variables.scss" as vars;
+@use "@/styles/breakpoints" as bp;
 
 .container {
 	padding-top: 75px;
@@ -60,6 +61,37 @@
 		.sousTitre {
 			@include textStyle;
 			text-align: left;
+		}
+	}
+}
+
+@include bp.respond-to(tablet) {
+	.container {
+		.blocks {
+			justify-content: center;
+			&.noBlock {
+				justify-content: center;
+			}
+
+			.block {
+				display: none;
+			}
+
+			.logo.isBlack {
+				transform: translateY(0);
+			}
+		}
+
+		.titres {
+			justify-content: center;
+
+			.titre {
+				text-align: center;
+			}
+
+			.sousTitre {
+				text-align: center;
+			}
 		}
 	}
 }
