@@ -8,6 +8,12 @@
 	justify-content: flex-start;
 	gap: 30px;
 
+	@include bp.respond-to(tablet) {
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 100px;
+	}
+
 	.photo {
 		object-fit: cover;
 		border-radius: 10%;
@@ -19,51 +25,43 @@
 		align-items: flex-start;
 		justify-content: flex-end;
 		gap: 15px;
+
+		@include bp.respond-to(tablet) {
+			align-items: center;
+		}
+
+		.nom {
+			@include smTitleStyle;
+		}
+
+		.desc {
+			@include textStyle;
+			padding-bottom: 5px;
+
+			@include bp.respond-to(tablet) {
+				text-align: center;
+			}
+		}
 	}
 
 	&.right {
 		flex-direction: row-reverse;
 
+		@include bp.respond-to(tablet) {
+			flex-direction: column;
+		}
+
 		.infos {
 			align-items: flex-end;
+
+			@include bp.respond-to(tablet) {
+				align-items: center;
+			}
 		}
-	}
-
-	.nom {
-		@include smTitleStyle;
-	}
-
-	.desc {
-		@include textStyle;
-		padding-bottom: 5px;
 	}
 
 	.musicLinks {
 		display: flex;
 		gap: 10px;
-	}
-}
-
-@include bp.respond-to(tablet) {
-	.container {
-		flex-direction: column;
-		align-items: center;
-		padding-bottom: 100px;
-
-		.infos {
-			align-items: center;
-
-			.desc {
-				text-align: center;
-			}
-		}
-
-		&.right {
-			flex-direction: column;
-
-			.infos {
-				align-items: center;
-			}
-		}
 	}
 }

@@ -10,16 +10,12 @@
 		height: 180vh;
 		clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
+		@include bp.respond-to(tablet) {
+			height: 190vh;
+		}
+
 		.centered {
 			transform: translateY(30vh);
-		}
-	}
-}
-
-@include bp.respond-to(tablet) {
-	.background {
-		.clipPath {
-			height: 190vh;
 		}
 	}
 }

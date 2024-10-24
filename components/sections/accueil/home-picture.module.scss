@@ -8,19 +8,18 @@
 	height: 100vh;
 	margin: auto;
 
+	@include bp.respond-to(tablet) {
+		position: relative;
+		height: 50vh;
+		width: 100vw;
+	}
+
 	.image {
 		object-fit: cover;
 		object-position: 50% 100%;
-	}
-}
 
-@include bp.respond-to(tablet) {
-	.container {
-		height: 50vh;
-		width: 100vh;
-
-		.image {
-			object-position: -145px top;
+		@include bp.respond-to(tablet) {
+			object-position: center top;
 		}
 	}
 }

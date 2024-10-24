@@ -12,8 +12,8 @@ export default function HomePage() {
 			<HomePicture />
 			<Section
 				color="secondary"
-				titre="Notre histoire"
-				description="On vient de la street et vous allez bientôt le savoir"
+				titre="Notre crew"
+				description="On vient de capitale de la gaule & ses alentours, bien que chacun aie son background"
 			>
 				<ListeMembres />
 			</Section>

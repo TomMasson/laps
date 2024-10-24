@@ -18,14 +18,25 @@
 		align-items: center;
 		justify-content: space-between;
 
+		@include bp.respond-to(tablet) {
+			justify-content: center;
+		}
+
 		&.noBlock {
 			justify-content: flex-end;
+
+			@include bp.respond-to(tablet) {
+				justify-content: center;
+			}
 		}
 
 		.block {
 			height: 27px;
 			width: 164px;
 			left: 0;
+			@include bp.respond-to(tablet) {
+				display: none;
+			}
 
 			&.primary {
 				background-color: vars.$primarySobre;
@@ -43,6 +54,10 @@
 
 			&.isBlack {
 				transform: translateY(124px);
+
+				@include bp.respond-to(tablet) {
+					transform: translateY(0);
+				}
 			}
 		}
 	}
@@ -53,45 +68,16 @@
 		justify-content: flex-end;
 		gap: 1rem;
 
+		@include bp.respond-to(tablet) {
+			text-align: center;
+		}
+
 		.titre {
 			@include titleStyle;
-			text-align: left;
 		}
 
 		.sousTitre {
 			@include textStyle;
-			text-align: left;
-		}
-	}
-}
-
-@include bp.respond-to(tablet) {
-	.container {
-		.blocks {
-			justify-content: center;
-			&.noBlock {
-				justify-content: center;
-			}
-
-			.block {
-				display: none;
-			}
-
-			.logo.isBlack {
-				transform: translateY(0);
-			}
-		}
-
-		.titres {
-			justify-content: center;
-
-			.titre {
-				text-align: center;
-			}
-
-			.sousTitre {
-				text-align: center;
-			}
 		}
 	}
 }
