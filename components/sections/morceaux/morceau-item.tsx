@@ -4,13 +4,13 @@ import WavesurferPlayer from "@wavesurfer/react";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaPauseCircle } from "react-icons/fa";
 import Image from "next/image";
-import { morceau } from "@/backend/morceaux";
+import { Morceau as MoerceauType } from "@/backend/morceaux";
 import styles from "./morceau-item.module.scss";
 import { useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 
 type MorceauCardProps = {
-	song: morceau;
+	song: MoerceauType;
 	songs: object[];
 	setSongs: any;
 	onPlayPause: (arg0: number) => void;
@@ -35,7 +35,7 @@ export default function Morceau({
 			<div className={styles.control}>
 				<Image
 					className={styles.image}
-					src={song.img}
+					src={`/tracks/${song.img ?? "default.png"}`}
 					fill
 					alt={`Photo du morceau : ${song.titre}`}
 				/>

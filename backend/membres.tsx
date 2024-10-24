@@ -14,7 +14,7 @@ export const membres: membre[] = [
 	{
 		nom: "Arsen",
 		desc: "Chanteur & lover aguerri",
-		img: "arsen_2.jpg",
+		img: "arsen.jpg",
 		urls: [
 			{
 				platform: "spotify",
@@ -37,7 +37,7 @@ export const membres: membre[] = [
 	{
 		nom: "DJACK",
 		desc: "Il fait des prods perché dans sa maison",
-		img: "edweud_1.jpg",
+		img: "edweud.jpg",
 		urls: [
 			{
 				platform: "spotify",
@@ -60,12 +60,12 @@ export const membres: membre[] = [
 	{
 		nom: "DzD",
 		desc: "Le ghost préféré de ton ghost préféré",
-		img: "dzd_1.jpg",
+		img: "dzd.jpg",
 	},
 	{
 		nom: "metheM",
 		desc: "Le cerveau de toutes les opérations",
-		img: "methem_1.jpg",
+		img: "methem.jpg",
 		urls: [
 			{
 				platform: "spotify",
@@ -92,7 +92,7 @@ export const membres: membre[] = [
 	{
 		nom: "MODI",
 		desc: "Il joue avec les démons, c'est le Ying",
-		img: "roms_1.jpg",
+		img: "roms.jpg",
 		urls: [
 			{
 				platform: "spotify",
@@ -115,7 +115,7 @@ export const membres: membre[] = [
 	{
 		nom: "SHAB",
 		desc: "Il aime défier le soleil, c'est le Yang",
-		img: "shab_2.jpg",
+		img: "shab.jpg",
 		urls: [
 			{
 				platform: "spotify",

@@ -1,5 +1,6 @@
 @use "@/styles/theme.scss" as *;
 @use "@/styles/variables.scss" as vars;
+@use "@/styles/breakpoints" as bp;
 
 .container {
 	position: relative;
@@ -7,17 +8,15 @@
 	justify-content: flex-start;
 	gap: 30px;
 
+	@include bp.respond-to(tablet) {
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 100px;
+	}
+
 	.photo {
 		object-fit: cover;
 		border-radius: 10%;
-	}
-
-	&.right {
-		flex-direction: row-reverse;
-
-		.infos {
-			align-items: flex-end;
-		}
 	}
 
 	.infos {
@@ -26,15 +25,39 @@
 		align-items: flex-start;
 		justify-content: flex-end;
 		gap: 15px;
+
+		@include bp.respond-to(tablet) {
+			align-items: center;
+		}
+
+		.nom {
+			@include smTitleStyle;
+		}
+
+		.desc {
+			@include textStyle;
+			padding-bottom: 5px;
+
+			@include bp.respond-to(tablet) {
+				text-align: center;
+			}
+		}
 	}
 
-	.nom {
-		@include smTitleStyle;
-	}
+	&.right {
+		flex-direction: row-reverse;
 
-	.desc {
-		@include textStyle;
-		padding-bottom: 5px;
+		@include bp.respond-to(tablet) {
+			flex-direction: column;
+		}
+
+		.infos {
+			align-items: flex-end;
+
+			@include bp.respond-to(tablet) {
+				align-items: center;
+			}
+		}
 	}
 
 	.musicLinks {

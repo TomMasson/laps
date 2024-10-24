@@ -10,11 +10,6 @@ export default function HomePicture() {
 				fill
 				alt="Photo du groupe LAPS"
 			/>
-			{/* <div className={styles.centeredText}>
-				<div className={styles.blurr}>
-					<p className={styles.text}>LAPS</p>
-				</div>
-			</div> */}
 		</div>
 	);
 }

@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints.scss" as bp;
+
 .background {
 	filter: drop-shadow(0px 10px 6px #00000040);
 
@@ -7,6 +9,10 @@
 		width: 100vw;
 		height: 180vh;
 		clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+
+		@include bp.respond-to(tablet) {
+			height: 190vh;
+		}
 
 		.centered {
 			transform: translateY(30vh);

@@ -1,3 +1,5 @@
+@use "@/styles/breakpoints.scss" as bp;
+
 .container {
 	padding: 70px 0;
 	display: flex;
@@ -5,8 +7,18 @@
 	width: 100%;
 	gap: 2rem;
 
+	@include bp.respond-to(tablet) {
+		padding-top: 50px;
+		gap: 50px;
+	}
+
 	.btnContainer {
 		width: 180px;
 		margin: 100px auto;
+
+		@include bp.respond-to(tablet) {
+			width: 180px;
+			margin: 0px auto;
+		}
 	}
 }
